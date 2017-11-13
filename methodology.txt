@@ -1,0 +1,18 @@
+For our project visualization, we are using D3.js for the graphical representation.
+In short, we will grab the location of websites that are visited and pipe them into our
+algorithm. Using this information, we will present a world map of all the connections made from
+our host.
+
+Pseudo-code:
+
+for each website visited from a list:
+  grab the ip of the site host
+  put each ip into a list
+
+for each ip in list:
+  map the ip to a location on the map (coordinates, city, country or province)
+  send the location to the .js for graphical representation
+
+returns the map of the locations
+
+Other code and tools will be used to gather the ip addresses from the sites. 
