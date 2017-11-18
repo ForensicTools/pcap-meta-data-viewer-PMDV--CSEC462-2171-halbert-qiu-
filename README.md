@@ -1,10 +1,11 @@
 # pcap-meta-data-viewer-PMDV--CSEC462-2171-halbert-qiu-
-Our project is to make a visualization tool that takes a pcap file and uses it to create a
-topology diagram where computers are listed by IP addresses. The tool then takes the network
-traffic from the pcap or data collection to trace the network traffic to determine where the 
-traffic is going geographically during a set time frame to determine if someone is being 
-productive during work times or if data is being sent to irregular locations. We will be using
-the following tools for piping data into our tool: tcpdump, tshark, wireshark and possibly Asyn.
+PCAP-META-DATA-VIEWER 
+Prerequisites:
+	Python 3.4.1+ - Required to run python script
+	PCAP- A PCAP capture of network traffic in IPV4
+	CSV File Created from PCAP- CSV must be placed in the same location of the script
+This tool visualizes network traffic taking place within a network and maps the traffic to locational data. The data is then displayed on an html map to show where traffic is going and coming from.
 
-Could we get some more info on asyn and how it links ip addresses to locations? You mentioned
-this in class.
+Authors:
+Patrick Qiu-pxq6829@g.rit.edu
+Christian Halbert-cjg9589@rit.edu
