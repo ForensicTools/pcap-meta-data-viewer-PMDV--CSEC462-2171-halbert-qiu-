@@ -1,6 +1,8 @@
 # pcap-meta-data-viewer-PMDV--CSEC462-2171-halbert-qiu-
 PCAP-META-DATA-VIEWER 
 Prerequisites:
+  Must run this command in run terminal: chrome --allow-file-access-from-files
+
 	Python 3.4.1+ - Required to run python script
 	PCAP- A PCAP capture of network traffic in IPV4
 	CSV File Created from PCAP- CSV must be placed in the same location of the script
