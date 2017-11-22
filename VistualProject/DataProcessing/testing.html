@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
+  <h2>Destination Locations</h2>
+  <div id="container1" style="position: relative; width: 98%; max-height: 300px;"></div>
+	<script>
+		d3.csv("locationfile.csv", function(data) {
+       //basic map config with custom fills, mercator projection
+		var bubble_map = new Datamap({
+			scope: 'world',
+			element: document.getElementById('container1'),
+			projection: 'mercator',
+			height: 680,
+			geographyConfig: {
+			popupOnHover: true,
+			highlightOnHover: true
+			},
+			fills: 	{
+				defaultFill: '#ABDDA4',
+				RUS: 'black'
+			}
+		});
+		var temp = [];
+		for (var i = 0; i < data.length; i++){
+			var object = {
+				name: data[i].Destination_IP,
+				fillKey: 'RUS',
+				radius: 4,
+				latitude: data[i].Latitude,
+				longitude: data[i].Longitude
+			}
+			temp.push(object);
+		}
+		bubble_map.bubbles(temp,
+		{
+			popupTemplate: function(temp) {
+				return '<div class="hoverinfo">IP address: ' + temp.name + '<br />Lat: ' + temp.latitude + '<br />Long: ' + temp.longitude
+			}
+		});
+		});
+    </script>
+</body>
